@@ -6,8 +6,8 @@ plugins {
     checkstyle
 }
 
-group = "pe.edu.galaxy.training.java.libs"
-version = "1.0.0"
+group = "pe.edu.nova.java.libs"
+version = findProperty("version") as String
 
 java {
     toolchain {
@@ -48,8 +48,8 @@ tasks.javadoc {
 
 pitest {
     junit5PluginVersion.set("1.2.1")
-    targetClasses.set(setOf("pe.edu.galaxy.training.java.libs.mapper.utils.*"))
-    targetTests.set(setOf("pe.edu.galaxy.training.java.libs.mapper.utils.*"))
+    targetClasses.set(setOf("pe.edu.nova.java.libs.mapper.utils.*"))
+    targetTests.set(setOf("pe.edu.nova.java.libs.mapper.utils.*"))
     mutators.set(setOf("DEFAULTS"))
     outputFormats.set(setOf("HTML", "XML"))
     pitestVersion.set("1.17.4")
@@ -64,7 +64,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/OWNER/${rootProject.name}")
+            url = uri("https://maven.pkg.github.com/ahincho/nova-java-spring-boot-mapper-utils")
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")

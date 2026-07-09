@@ -1,1 +1,1 @@
-rootProject.name = "mapper-utils"
+rootProject.name = "nova-mapper-utils"
