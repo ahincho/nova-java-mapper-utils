@@ -15,24 +15,24 @@ on:
 jobs:
   build:
     if: github.event_name == 'pull_request'
-    uses: OWNER/nova-devops/.github/workflows/reusable-build-gradle.yml@main
+    uses: ahincho/nova-devops/.github/workflows/reusable-build-gradle.yml@main
     secrets: inherit
 
   sonar:
     if: github.event_name == 'pull_request'
-    uses: OWNER/nova-devops/.github/workflows/reusable-sonarcloud-gradle.yml@main
+    uses: ahincho/nova-devops/.github/workflows/reusable-sonarcloud-gradle.yml@main
     with:
-      sonar-org: OWNER
-      sonar-project-key: OWNER_nova-mapper-utils
+      sonar-org: ahincho
+      sonar-project-key: ahincho_nova-java-spring-boot-mapper-utils
     secrets: inherit
 
   version-bump:
     if: github.event_name == 'push'
-    uses: OWNER/nova-devops/.github/workflows/reusable-version-bump-gradle.yml@main
+    uses: ahincho/nova-devops/.github/workflows/reusable-version-bump-gradle.yml@main
     secrets: inherit
 
   publish:
     if: github.event_name == 'push'
     needs: version-bump
-    uses: OWNER/nova-devops/.github/workflows/reusable-publish-gradle.yml@main
+    uses: ahincho/nova-devops/.github/workflows/reusable-publish-gradle.yml@main
     secrets: inherit
