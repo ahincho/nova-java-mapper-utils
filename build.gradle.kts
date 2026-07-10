@@ -54,6 +54,13 @@ tasks.javadoc {
     (options as StandardJavadocDocletOptions).addStringOption("Xdoclint:all", "-quiet")
 }
 
+checkstyle {
+    // Only lint production code. Test suites commonly rely on static-import
+    // wildcards (org.junit.jupiter.api.Assertions.*, net.jqwik.api.*), which
+    // is an accepted convention that would otherwise trip AvoidStarImport.
+    sourceSets = listOf(project.sourceSets.main.get())
+}
+
 pitest {
     junit5PluginVersion.set("1.2.1")
     targetClasses.set(setOf("pe.edu.nova.java.libs.mapper.utils.*"))
