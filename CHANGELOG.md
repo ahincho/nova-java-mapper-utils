@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/ahincho/nova-java-mapper-utils/compare/v1.0.0...v1.0.1) (2026-07-13)
+
+
+### Bug Fixes
+
+* **ci:** add component + skip-snapshot + manifest-file (mask-utils pattern) ([0eb8420](https://github.com/ahincho/nova-java-mapper-utils/commit/0eb8420560d29e30f1d781a1ecc794fd1924c360))
+* **ci:** add last-release-sha, include-component-in-tag: false, release-type: java to top-level config; pass manifest-file in wrapper ([1934fca](https://github.com/ahincho/nova-java-mapper-utils/commit/1934fca226f10840bb496a6a834a0182020aa1b0))
+
 ## 1.0.0 (2026-07-10)
 
 
