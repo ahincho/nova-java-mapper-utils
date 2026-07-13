@@ -1,16 +1,16 @@
 {
+  "last-release-sha": "a2dbeb25632c79605f5125203378c259fcca8010",
   "packages": {
     ".": {
+      "component": "nova-mapper-utils",
       "package-name": "pe.edu.nova.java.libs:nova-mapper-utils",
       "release-type": "java",
+      "include-component-in-tag": false,
+      "skip-snapshot": true,
       "bump-minor-pre-major": true,
       "bump-patch-for-minor-pre-major": true,
       "draft": false,
       "prerelease": false
     }
-  },
-  "last-release-sha": "a2dbeb25632c79605f5125203378c259fcca8010",
-  "include-component-in-tag": false,
-  "include-v-in-tag": true,
-  "release-type": "java"
+  }
 }
